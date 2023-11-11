@@ -1,0 +1,191 @@
+:root {
+  --bg-gradient-Gray: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+
+  --border-gradient-Gray-2: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  ),
+  hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    hsl(45, 100%, 71%) 0%,
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+      135deg,
+      hsla(45, 100%, 71%, 0.251) 0%,
+      hsla(35, 100%, 68%, 0) 59.86%
+    ),
+    hsl(240, 2%, 13%);
+
+  --Gray: hsl(0, 0%, 22%);
+  --Black: hsl(0, 0%, 7%);
+  --Black-2: hsl(240, 2%, 12%);
+  --Yellow: hsl(45, 100%, 72%);
+  --white-2: hsl(0, 0%, 98%);
+  --Yellow-2: hsl(45, 100%, 72%);
+
+  --poppins: "Poppins", sans-serif;
+
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+}
+
+/* ----- */
+::selection {
+  background: var(--Yellow);
+  color: var(--Black);
+}
+
+p {
+  font-family: var(--poppins);
+  font-weight: 500;
+  color: var(--white-2);
+}
+
+h1,
+h2,
+.title {
+  font-family: var(--poppins);
+  font-weight: 550;
+  color: var(--white-2);
+}
+/* ----- */
+
+* {
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-box {
+  padding: 45px;
+  border-radius: 20px;
+  margin: 40px;
+  max-height: 1200px;
+  max-width: 700px;
+  background: var(--Black-2);
+  border: 1px solid var(--Gray);
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+.img-profil {
+  height: 200px;
+  border-radius: 20px;
+}
+
+.contact-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-Gray);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.contact-box {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--border-gradient-Gray-2);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.input-contact {
+  display: grid;
+  gap: 15px;
+}
+
+.form-input {
+  background: var(--Black-2);
+  box-shadow: var(--shadow-1);
+  color: var(--white-2);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 13px 20px;
+  border: 1px solid var(--Gray);
+  border-radius: 14px;
+  outline: none;
+  font-family: var(--poppins);
+}
+
+textarea {
+  background: var(--Black-2);
+  border: 1px solid var(--Gray);
+  box-shadow: var(--shadow-1);
+  height: 80px;
+  resize: none;
+  margin-bottom: 25px;
+  font-family: var(--poppins);
+}
+
+.form-input::placeholder {
+  font-weight: 500;
+}
+
+.form-input:focus {
+  border-color: var(--Yellow-2);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.my-btn {
+  position: relative;
+  width: 100%;
+  background: var(--border-gradient-Gray-2);
+  color: var(--Yellow);
+  font-family: var(--poppins);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+
+.my-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-Gray);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+
+.my-btn:hover {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.my-btn:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
